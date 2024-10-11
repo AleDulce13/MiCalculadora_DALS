@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiCalculadora_DALS.MainPage" BackgroundColor="Black">
+
+    <StackLayout  Padding="10" Spacing="10">
+        <!-- Pantalla -->
+        <Entry x:Name="Pantalla" 
+               FontSize="40" 
+               TextColor="White" 
+               HorizontalOptions="FillAndExpand" 
+               HorizontalTextAlignment="End" 
+               IsReadOnly="True" 
+               BackgroundColor="DimGray" />
+
+        <!-- Filas de botones -->
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <!-- Primera fila -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Botones de la primera fila -->
+            <Button Text="AC" Grid.Row="0" Grid.Column="0" TextColor="White" FontSize="30" Clicked="LimpiarTodo_Clicked" CornerRadius="60" BackgroundColor="DarkRed"/>
+            <Button Text="()" Grid.Row="0" Grid.Column="1" TextColor="White" FontSize="30" Clicked="BorrarDigito_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+            <Button Text="%" Grid.Row="0" Grid.Column="2" TextColor="White" FontSize="30" Clicked="Operacion_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+            <Button Text="/" Grid.Row="0" Grid.Column="3" TextColor="White" FontSize="30" Clicked="Operacion_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+
+            <!-- Segunda fila -->
+            <Button Text="7" Grid.Row="1" Grid.Column="0" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="8" Grid.Row="1" Grid.Column="1" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="9" Grid.Row="1" Grid.Column="2" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="x" Grid.Row="1" Grid.Column="3" TextColor="White" FontSize="30" Clicked="Operacion_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+
+            <!-- Tercera fila -->
+            <Button Text="4" Grid.Row="2" Grid.Column="0" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="5" Grid.Row="2" Grid.Column="1" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="6" Grid.Row="2" Grid.Column="2" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" TextColor="White" FontSize="30" Clicked="Operacion_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+
+            <!-- Cuarta fila -->
+            <Button Text="1" Grid.Row="3" Grid.Column="0" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="2" Grid.Row="3" Grid.Column="1" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="3" Grid.Row="3" Grid.Column="2" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="+" Grid.Row="3" Grid.Column="3" TextColor="White" FontSize="30" Clicked="Operacion_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+
+            <!-- Quinta fila -->
+            <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" TextColor="White" FontSize="30" Clicked="Numero_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="." Grid.Row="4" Grid.Column="2" TextColor="White" FontSize="30" Clicked="Punto_Clicked" CornerRadius="60" BackgroundColor="DimGray"/>
+            <Button Text="=" Grid.Row="4" Grid.Column="3" TextColor="White" FontSize="30" Clicked="Igual_Clicked" CornerRadius="60" BackgroundColor="DarkGray" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
